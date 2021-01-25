@@ -1,8 +1,13 @@
+from time import timezone
+
 import urllib3
 import xmltodict
 import traceback
 import feedparser
 from datetime import datetime, timedelta
+
+from pytz import utc
+
 
 def get_latest_publish_date(url):
 
@@ -14,7 +19,7 @@ def get_latest_publish_date(url):
 
 
 def get_num_days_without_activity(date):
-    current_date = datetime.today()
-    count = current_date - date
+    current_date = datetime.now().replace(tzinfo=utc)
+    count = current_date - date.replace(tzinfo=utc)
     return count.days
 

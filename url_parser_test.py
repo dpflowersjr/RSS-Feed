@@ -17,10 +17,9 @@ class MyTestCase(unittest.TestCase):
     def test_get_num_days_without_activity(self):
         url_1 = "http://joeroganexp.joerogan.libsynpro.com/rss"
         latest_pub_date = get_latest_publish_date(url_1)
-        get_num_days_without_activity(latest_pub_date)
+        print(get_num_days_without_activity(latest_pub_date))
         self.assertTrue(True)
 
 if __name__ == '__main__':
-    import url_parser
     unittest.main()
 # feeds need to be taken in as a list , then parsed one by one
