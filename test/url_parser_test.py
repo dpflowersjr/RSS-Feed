@@ -25,7 +25,7 @@ class MyTestCase(unittest.TestCase):
         print(get_num_days_without_activity(latest_pub_date))
         self.assertTrue(True)
 
-    #On Mon Jan 25 2021 the result will be the Joe Rogan Expirence
+    #On Mon Jan 25 2021 the result will be the Joe Rogan Expirence with 58 days. If you increase by one youll get the same.
     def test_find_company_with_inactivity_for_given_num_of_days(self):
         companies_rss_dict = dict({
             'The Joe Rogan Experience': "http://joeroganexp.joerogan.libsynpro.com/rss",
